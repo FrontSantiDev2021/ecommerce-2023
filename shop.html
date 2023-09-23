@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/app.js"></script>  
+    <script  src="js/navbar.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+          <div id="navbar">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <a href="#"><h1  id="logo">AIRAZON</h1></a>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="linkItem"  href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="linkItem" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="linkItem" href="contact.html" > Contact</a>
+              </li>
+            </ul>
+      
+            <div class="icons-div">                
+              <div class="box ">
+                <form name="search">
+                    <input type="text" class="input"  style="font-family: 'Outfit', sans-serif;" name="txt" maxlength="20"  autocomplete="off" onmouseout="this.value = ''; this.blur();">
+                </form>
+                <i class="fas fa-search icon-navbar" ></i>
+              </div>
+              <button><a href="" ><svg class="icon-navbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></a>
+              <button><a href="sesion.html" ><svg class="icon-navbar"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 288A144 144 0 1 0 256 0a144 144 0 1 0 0 288zm-94.7 32C72.2 320 0 392.2 0 481.3c0 17 13.8 30.7 30.7 30.7H481.3c17 0 30.7-13.8 30.7-30.7C512 392.2 439.8 320 350.7 320H161.3z"/></svg></a></button>
+            </div>
+        </div>
+
+        <div class="ad-shop"></div>
+
+    </header>
+    
+    <main id="main-shop">
+      <div class="main-shop__panel">
+        <div id="panel-filter">
+          <div><i class="fa-solid fa-arrow-down-short-wide"></i><button id="moveButton">Ordena plox</button></div>
+          
+          <div><i class="fa-solid fa-filter"></i><a style="cursor: pointer;">Filtros</a></div>
+        </div>
+        <div id="panel-1">
+            <button id="closer-sidebar">x</button>
+            <aside class="sidebar">
+
+             
+                <div class="menu">
+                    Menu
+                </div>
+                <nav class="sidebar-nav">
+                  <ul>
+                    <li>
+                      <h2>All</h2>
+                      <div id="checklist">
+                        <input id="01" type="checkbox" name="r" value="1">
+                        <label for="01">Bread</label>
+                        <input id="02" type="checkbox" name="r" value="2">
+                        <label for="02">Cheese</label>
+                        <input id="03" type="checkbox" name="r" value="3">
+                        <label for="03">Coffee</label>
+                      </div>
+                      
+                    </li>
+                    <li>
+                      <div class="color-content">
+                        <h3>Color</h3>
+                        <div class="color-pick">
+                          <div class="color color-black"></div>
+                          <div class="color color-red"></div>
+                          <div class="color color-blue"></div>
+                          <div class="color color-orange"></div>
+                          <div class="color color-red"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li >
+                      <div class=" radioCheck">
+                        <form id="checkRadio">
+                          <h3>Lorem, ipsum dolor.</h3>
+                          <label>
+                            <input type="radio" name="radio" checked/>
+                            <span>HTML</span>
+                          </label>
+                          <label>
+                            <input type="radio" name="radio"/>
+                            <span>CSS</span>
+                          </label>
+                          <label>
+                            <input type="radio" name="radio"/>
+                            <span>Javascript</span>
+                          </label>
+                          <label>
+                            <input type="radio" name="radio"/>
+                            <span>Javascript</span>
+                          </label>
+                          <label>
+                            <input type="radio" name="radio"/>
+                            <span>Javascript</span>
+                          </label>
+                        </form>
+                      
+                      </div>
+                
+                    </li>
+                    <li>
+                      <input type="checkbox" checked>
+                      <i></i>
+                      <h2>Languages Used</h2>
+                      
+                      <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+                    </li>
+        
+                    <li>
+                      <div class="second"> 
+                        <div class="center">
+                          <div class="header"><b>Price </b><span>Range</span></div>
+                          <div class="price text-violet"><span id="from">$500</span><span> - </span><span id="to">$15 000</span></div>
+                          <div class="average">
+                              <div>Average price: $1 200</div>
+                          </div>
+                          <div class="multi-range"><input id="min" type="range" min="0" max="100" value="0" step="0.0001" /><input id="max" type="range" min="0" max="100" value="100" step="0.0001" /></div>
+                        </div>
+                      </div>
+                      
+                    </li>
+                    <li>
+                      <input type="checkbox" checked>
+                      <i></i>
+                      <h2>Points of Interest</h2>
+                      <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+                    </li>
+                
+                    <li class="li-last">
+                      <input type="checkbox" checked>
+                      <i></i>
+                      <h2>Points of Interest</h2>
+                      <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+                    </li>
+                  </ul>
+                  <div class="submitForm">  <button type="submit" class="button-28 button-28--check" form="checkRadio"> <p>Apply</p></button></div>
+                </nav>
+             
+             </aside>
+        </div>
+     
+          
+      </div>
+      <aside class="sidebar sidebarDeskotp">
+              <div class="menu">
+              Menu
+             </div>
+          
+        <nav class="sidebar-nav">
+            <ul>
+              <li>
+                <h2>All</h2>
+                <div id="checklist">
+                  <input id="01" type="checkbox" name="r" value="1">
+                  <label for="01">Bread</label>
+                  <input id="02" type="checkbox" name="r" value="2">
+                  <label for="02">Cheese</label>
+                  <input id="03" type="checkbox" name="r" value="3">
+                  <label for="03">Coffee</label>
+                </div>
+                
+              </li>
+              <li>
+                <div class="color-content">
+                  <h3>Color</h3>
+                  <div class="color-pick">
+                    <div class="color color-black"></div>
+                    <div class="color color-red"></div>
+                    <div class="color color-blue"></div>
+                    <div class="color color-orange"></div>
+                    <div class="color color-red"></div>
+                  </div>
+                </div>
+              </li>
+              <li >
+                <div class=" radioCheck">
+                  <form id="checkRadio">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <label>
+                      <input type="radio" name="radio" checked/>
+                      <span>HTML</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio"/>
+                      <span>CSS</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio"/>
+                      <span>Javascript</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio"/>
+                      <span>Javascript</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio"/>
+                      <span>Javascript</span>
+                    </label>
+                  </form>
+                 
+                </div>
+           
+              </li>
+              <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2>Languages Used</h2>
+                
+                <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+              </li>
+  
+              <li>
+                <div class="second"> 
+                  <div class="center">
+                    <div class="header"><b>Price </b><span>Range</span></div>
+                    <div class="price text-violet"><span id="from">$500</span><span> - </span><span id="to">$15 000</span></div>
+                    <div class="average">
+                        <div>Average price: $1 200</div>
+                    </div>
+                    <div class="multi-range"><input id="min" type="range" min="0" max="100" value="0" step="0.0001" /><input id="max" type="range" min="0" max="100" value="100" step="0.0001" /></div>
+                  </div>
+                </div>
+                
+              </li>
+              <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2>Points of Interest</h2>
+                <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+              </li>
+          
+              <li class="li-last">
+                <input type="checkbox" checked>
+                <i></i>
+                <h2>Points of Interest</h2>
+                <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+              </li>
+          </ul>
+          <div class="submitForm">  <button type="submit" class="button-28 button-28--check" form="checkRadio"> <p>Apply</p></button></div>
+        </nav>
+      </aside>
+      <section class="section-shop">
+            <div id="gridShop">           
+                  <div class="productShop one">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                        <h3>Zapas Zarpadas</h3>
+                        <div class="raiting">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                        <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p1"><h4>- 50% off</h4></div>
+                  </div>
+                  
+                  <div class="productShop two">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                     </div>
+                    <div class="poster p2">
+                      <h4>B</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop three">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                   </div>
+                    <div class="poster p3"><h4>G</h4></div>
+                  </div>
+                  
+                  <div class="productShop five">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p4"><h4>M</h4></div>
+                  </div>
+                  
+                  <div class="productShop six">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p5">
+                      <h4>N</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop seven">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                  </div>
+                    <div class="poster p6">
+                      <h4>K</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="productShop eight">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p7">
+                      <h4>Q</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="productShop nine">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                  </div>
+                    <div class="poster p8">
+                      <h4>L</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop ten">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p9">
+                      <h4>J</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop eleven">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p10">
+                      <h4>H</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop tlv">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p11">
+                      <h4>W</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop thirteen">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p12">
+                      <h4>S</h4>
+                    </div>
+                  </div>
+                
+                  <div class="productShop ftn">
+                   <img src="img/pngwing.com.png" alt="">
+                    <div class="productShop__body ">
+                      <p>recommend for usermans</p>
+                      <h3>Zapas Zarpadas</h3>
+                      <div class="raiting">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span class="pricing-span__2">$122</span>
+                    </div>
+                    <div class="poster p13">
+                      <h4>E</h4>
+                    </div>
+                  </div>
+                
+                <div class="productShop fith">
+                 <img src="img/pngwing.com.png" alt="">
+                  <div class="productShop__body ">
+                    <p>recommend for usermans</p>
+                    <h3>Zapas Zarpadas</h3>
+                    <div class="raiting">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <span class="pricing-span__2">$122</span>
+                  </div>
+                  <div class="poster p14">
+                    <h4>R</h4>
+                  </div>
+                </div>
+                
+                <div class="productShop sith">
+                 <img src="img/pngwing.com.png" alt="">
+                  <div class="productShop__body ">
+                    <p>recommend for usermans</p>
+                    <h3>Zapas Zarpadas</h3>
+                    <div class="raiting">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <span class="pricing-span__2">$122</span>
+                  </div>
+                  <div class="poster p15">
+                    <h4>U</h4>
+                  </div>
+                </div>
+                
+                <div class="productShop sevth">
+                 <img src="img/pngwing.com.png" alt="">
+                  <div class="productShop__body ">
+                    <p>recommend for usermans</p>
+                    <h3>Zapas Zarpadas</h3>
+                    <div class="raiting">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <span class="pricing-span__2">$122</span>
+                  </div>
+                  <div class="poster p16">
+                    <h4>A</h4>
+                  </div>
+                </div>  
+          
+          </div>
+        
+      </section>
+      <div class="button-grid">
+        <div class="previous-next-buttons">
+          <a href="#" class="previous"><i class="fa-solid fa-caret-left"></i> Previous</a>
+          <a href="#" class="next">Next <i class="fa-solid fa-caret-right"></i> </a>
+        </div>
+      </div>
+  
+    </main>
+    <br><br><br><br>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">airazon</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 Somewhere In. The World 22193-10212<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+  
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+  
+            <li>
+              <a href="#">Print</a>
+            </li>
+                
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item "> <!--nav__item--extra-->
+          <h2 class="nav__title">Technology</h2>
+          
+          <ul class="nav__ul "> <!----.nav__ul--extra-->
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2019 Something. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
