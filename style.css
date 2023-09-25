@@ -316,7 +316,7 @@ main {
   justify-content: space-between;
 }
 
-.sliderBox--right .slider-1__btns {
+.sliderBox--right #slider-1__btns {
   height: 80px;
   align-self: self-end;
 
@@ -397,7 +397,7 @@ main {
 
 }
 
-.slider-1__btns {
+#slider-1__btns {
   width: 50%;
   display: flex;
   flex-direction: row-reverse;
@@ -2538,9 +2538,9 @@ b {
 
 
 /*------------------------------------------------MediaQueries Index------------------------------------------------*/
-@media (min-width: 576px) and (max-width: 800px) {
+@media (min-width: 306px) and (max-width: 800px) {
   
-  html,body{
+  html , body{
     width: 100%;
     height: 100%;
     margin: 0;
@@ -2554,10 +2554,10 @@ b {
     font-size: 1rem;
     box-sizing: border-box;
     & h1{
-      font-size: 1.5rem;
+      font-size: 1rem;
       position: absolute;
-      top: 30%;
-      left: 12%;
+      top: 35%;
+      left: 20%;
     }
     & .icons-div{
       width: 120px;
@@ -2571,7 +2571,7 @@ b {
   }
 
   .box-h3 h3{
-    font-size: 4.2rem;
+    font-size: 2.2rem;
     
   }
   .box-h3{
@@ -2580,42 +2580,42 @@ b {
     justify-content: space-between;
     height: 200px;
     width:100%;
-   
+
   }
   .box-h3 p {
   
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 100%;
     height: 80px;
-    padding: 0 1rem;
     overflow-wrap: break-word;
   }
-  .sliderBox--right{
-    display: inline-block;
-
-  }
-  .sliderBox--right .box-h3 {
+  .sliderBox , .sliderBox--right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 200px;
-    width:100%;
-
-    & h3{
-      height: 20%;
-    }
-}
-  .sliderBox--right .box-h3 p{
-    width: 100%;
-    height: 80px;
-    padding: 0 1rem;
-    overflow-wrap: break-word;
   
   }
-  .slider-1__btns{
-    margin-top: 20px;
-    width: 400px;
+  .sliderBox--right{
+    left: 55%;
+  }
 
+  .sliderBox--right > #slider-1__btns{
+    height: 150px;
+    margin-top: 20px;
+    
+  }
+  #slider-1__btns{
+    margin: 0;
+  
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    padding: 0;
+    height: 150px;
+    flex-wrap: wrap;
+    width: 100%;
+ 
   }
   .main-index , #main-shop{
     min-height: 200vh;
@@ -2634,8 +2634,8 @@ b {
     align-items: stretch;
     overflow-y: scroll;
     & .circle, .circle img{
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       align-items: center;
     }
   }
@@ -2753,15 +2753,24 @@ b {
   /*---------------------------------------------------*/
   #categories-index{
   height: 120vh;
-  
+   
+    max-width: 100%;
 
   }
+  .categories-index__top{
+    margin: 0;
+   
+  }
+  .categories-index__top h3{
+      font-size: 2rem;
+      
+  }
   .categories-index__carding{
-    box-sizing: border-box;
+
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(2, 0.8fr);
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    margin: 0;
     transition: grid-template-columns 500ms ease;
   
   }
@@ -2807,6 +2816,7 @@ b {
     & .card-body{
       height: 100%;
       display: block;
+      z-index: 2;
       width: 50%;
       position: absolute;
       & .card-text{
@@ -2817,7 +2827,9 @@ b {
       position: absolute;
       width: 50%;
       top: 50%;
-      left: 80%;
+      opacity: 0.4;
+      left: 50%;
+      z-index: 1;
       transform: translate(-50%,-50%);
     }
   
@@ -2826,12 +2838,18 @@ b {
     display: flex;
     width: 100%;
     position: relative;
+    
     flex-direction: row-reverse;
+    & .card-body{
+      z-index: 2;
+    }
     & i{
       position: absolute;
       width: 50%;
       top: 50%;
       left: 32%;
+      opacity: 0.4;
+      z-index: 1;
       transform: translate(-50%,-50%);
     }
   
@@ -2863,27 +2881,36 @@ b {
   }
   .div1--three ,.div2--four{
     overflow: hidden;
+    &  #men-wmen{
+      top: 0;
+      position: absolute;
+      left: 20%;
+    }
   }
+
   .div1--three .card-body ,.div2--four .card-body{
     height: 100%;
     display: flex;
-  
+    width: 100%;
     justify-content: space-between;
     & .card-text{
       width: 100%;
-      font-size: 1.5em;
+      font-size: 1em;
     }
     & .card-title{
-      font-size: 3em;
+      font-size: 1.2em;
     }
     & .card-body__link{
       display: flex;
-
+      height: 100%;
       justify-content: space-between;
       width: 35vh;
-     
+      & .flex-items img{
+        width: 50px;
+        height: 50px;
+      }
         &  .flex-p  p{
-          font-size:1em ;
+          font-size:0.8em ;
         }
     }
   }
@@ -2893,7 +2920,11 @@ b {
     .page{
       width: 100%;
 
-    
+      
+    }
+    .linkProductMain .text p{
+      width: 100%;
+  
     }
     #ad-last{
       margin-top: 250px;
